@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "kudos",
+  "info": {
+    "singularName": "kudo",
+    "pluralName": "kudos",
+    "displayName": "kudos"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "author": {
+      "type": "email",
+      "required": true
+    }
+  }
+}
