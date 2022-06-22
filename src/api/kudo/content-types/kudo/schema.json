@@ -4,7 +4,8 @@
   "info": {
     "singularName": "kudo",
     "pluralName": "kudos",
-    "displayName": "kudos"
+    "displayName": "kudos",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -18,6 +19,9 @@
     "author": {
       "type": "email",
       "required": true
+    },
+    "message": {
+      "type": "string"
     }
   }
 }
