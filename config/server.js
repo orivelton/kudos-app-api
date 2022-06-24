@@ -4,5 +4,5 @@ module.exports = ({ env }) => ({
   app: {
     keys: env.array('APP_KEYS'),
   },
-  url: "https://parser-kudos-app.herokuapp.com"
+  url: "https://parser-kudos-app.herokuapp.com/api"
 });
