@@ -1,1 +1,3 @@
-//eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjU1ODI5NzI5LCJleHAiOjE2NTg0MjE3Mjl9.pfkzAhmDaayJIIobrDr6eLu8L7-o1kIAinwG_DMArkQ
+# Strapi application
+
+A quick description of your strapi application
