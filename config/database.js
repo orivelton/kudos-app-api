@@ -1,21 +1,20 @@
-const parse = require('pg-connection-string').parse;
-const config = parse(process.env.DATABASE_URL);
-
-module.exports = ({ env }) => {
-  return {
-    connection: {
-      client: 'postgres',
-      connection: {
-        host: config.host,
-        port: config.port,
-        database: config.database,
-        user: config.user,
-        password: config.password,
-        ssl: {
-          rejectUnauthorized: false
-        },
+module.exports = ({ env }) => ({
+  defaultConnection: 'default',
+  connections: {
+    default: {
+      connector: 'mongoose',
+      settings: {
+        host: env('DATABASE_HOST', 'kudos-app.ejxr8xj.mongodb.net'),
+        srv: env.bool('DATABASE_SRV', true),
+        port: env.int('DATABASE_PORT', 27017),
+        database: env('DATABASE_NAME', 'kudos-app'),
+        username: env('DATABASE_USERNAME', 'kudos-app'),
+        password: env('DATABASE_PASSWORD', 'ZAU3bBRe3b2gbsQ9'),
       },
-      debug: false,
+      options: {
+        authenticationDatabase: env('AUTHENTICATION_DATABASE', null),
+        ssl: env.bool('DATABASE_SSL', true),
+      },
     },
-  }
-};
+  },
+});
